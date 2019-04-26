@@ -13,11 +13,11 @@ class WeatherCheck::CLI
     def create_location_by_zipcode 
         puts "Enter 5 digit zip code"
         input = gets.strip
-        if input.length != 5 || !input.to_i || !input.to_i.between?(501,99950)
-            puts "Invalid Zip Code" 
-        else
+        if input.length == 5 && input.to_i && input.to_i.between?(501,99950)
             location = WeatherCheck::LocationBuilder.build_from_zipcode(input, FORECAST_DAYS)
             puts "Zip code not found" if !location
+        else
+            puts "Invalid Zip Code" 
         end
         defined? location && location 
     end
@@ -57,6 +57,8 @@ class WeatherCheck::CLI
         puts TABLE_FORMAT % ["Location", dates[0], dates[1], dates[2]]
     end
 
+    # TODO: notice the similarity in the reports?  Maybe generalize with 
+    # a callback/yield where caller provides the data for a row in the table?
     def forecast_report
         table_header
         WeatherCheck::Location.all.each { |loc| 

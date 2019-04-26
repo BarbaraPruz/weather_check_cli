@@ -7,7 +7,7 @@ class WeatherCheck::Weathercom
 
         begin
             doc = Nokogiri::HTML(open(WEATHERCOM_URL+zipcode))
-            title = doc.search("h1").text; # or .text # name + zip
+            title = doc.search("h1").text; 
             hash[:name]=title.split(/\(/).first.strip!
             hash[:zipcode]=zipcode
     
