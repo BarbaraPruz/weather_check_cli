@@ -15,6 +15,7 @@ To run, ./bin/weather-check
 and then follow console prompts
 
 ### Example of User Interface
+```
 Location                APR 25                       APR 26                       APR 27
 Honolulu, HI (96825)    Showers Late                 AM Showers                   Showers
 Charleston, SC (29403)  Cloudy                       AM Thunderstorms             Sunny
@@ -23,7 +24,7 @@ Options:
 2. Forecast Report
 3. Temperature Report
 Enter Option Number or exit
-
+```
 ## Implementation Notes
 
 Main source files are in lib/weather_check.
