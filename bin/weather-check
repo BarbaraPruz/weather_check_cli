@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# ToDo: fix gemspec and then can just do bundler setup + weather_check (no need for lib)
+# require "bundler/setup"
+# require "weather_check"
+require "./lib/weather_check"
+
+WeatherCheck::CLI.new.call
