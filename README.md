@@ -36,6 +36,8 @@ Classes:
 
 The app design plays with the Builder pattern.  The LocationBuilder controls the building of a Location.  It uses a weather resource (only 1 right now, so directly calling Weathercom class) to retrieve forecast data.  It then constructs the DailyForecast objects and finally the Location object.
 
+To get weather data, this app uses weather.com. The Weathercom class encapsulates the fact that the website is scraped, and also details of the scraping.   So Weathercom clients just know that the class can provide a hash of weather data for a zip code (and not how this is done).
+
 The Location class is a "typical" Ruby model class.   Class variable is used to keep track of all Location objects.
 
 ## License
