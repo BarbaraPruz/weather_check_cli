@@ -12,8 +12,17 @@ A gem in progress...  For now
 ## Usage
 
 To run, ./bin/weather-check
+and then follow console prompts
 
-Follow console prompts
+Example of User Interface
+Location                APR 25                       APR 26                       APR 27
+Honolulu, HI (96825)    Showers Late                 AM Showers                   Showers
+Charleston, SC (29403)  Cloudy                       AM Thunderstorms             Sunny
+Options:
+1. Add Location
+2. Forecast Report
+3. Temperature Report
+Enter Option Number or exit
 
 ## Implementation Notes
 
